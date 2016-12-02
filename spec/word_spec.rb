@@ -13,9 +13,17 @@ describe(Word) do
     end
   end
 
-  describe(".all")do
+  describe(".all") do
     it('returns an empty @@words') do
       expect(Word.all).to(eq([]))
+    end
+  end
+
+  describe("#save") do
+    it('adds a word to the @@words array') do
+      test_word = Word.new({:word=> "immure", :definition=> "to shut in"})
+      test_word.save()
+      expect(Word.all).to(eq([test_word]))
     end
   end
 
