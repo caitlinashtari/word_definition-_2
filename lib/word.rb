@@ -1,6 +1,5 @@
 class Word
   @@words = []
-
   attr_reader :word, :definition, :id
 
   define_method(:initialize) do |attributes|
