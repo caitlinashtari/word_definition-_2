@@ -27,5 +27,13 @@ describe(Word) do
     end
   end
 
+  describe(".clear") do
+    it('empties all of the saved words from the @@words array') do
+      Word.new({:word=> "immure", :definition=> "to shut in"}).save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
+
 
 end
