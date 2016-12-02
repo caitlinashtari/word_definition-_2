@@ -14,8 +14,7 @@ post('/dictionary') do
   @word = params.fetch("word")
   @definition = params.fetch('definition')
   @speach_part = params.fetch('speach_part')
-  new_word = Word.new(@word).save() #{:word=>"incipient"}
-  new_definition = Definition.new({:definition=> @definition, :speach_part=> @speach_part}).save() #{:definition=>"in an initial stage", :speach_part=>"adjective"}.save
-  new_entry = new_word.add_definitions(new_definition)
+  new_word = Word.new(:word=> @word).save()
+  new_definition = Definition.new({:definition=> @definition, :speach_part=> @speach_part}).save()
   erb(:success)
 end
