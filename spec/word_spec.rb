@@ -43,6 +43,15 @@ describe(Word) do
       expect(Word.find(test_word1.id())).to(eq(test_word1))
     end
   end
+
+  describe("#add_definition") do
+    it("adds a definition to a word") do
+      test_word1 = Word.new({:word=> "incipient"})
+      test_definition = Definition.new({:definition=> "in an initial stage", :speach_part=>"adjective"})
+      test_word1.add_definition(test_definition)
+      expect(test_word1.definitions).to(eq([test_definition]))
+    end
+  end
 end
 
 describe(Definition) do
@@ -86,6 +95,5 @@ describe(Definition) do
       expect(Definition.find(test_definition1.id())).to(eq(test_definition1))
     end
   end
-  #
-  #
+
 end
