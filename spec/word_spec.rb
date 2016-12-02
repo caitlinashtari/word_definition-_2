@@ -69,13 +69,13 @@ describe(Definition) do
     end
   end
   #
-  # describe(".clear") do
-  #   it('empties all of the saved words from the @@words array') do
-  #     Word.new({:word=> "immure", :definition=> "to shut in"}).save()
-  #     Word.clear()
-  #     expect(Word.all()).to(eq([]))
-  #   end
-  # end
+  describe(".clear") do
+    it('empties all of the saved definitions from the @@definitions array') do
+      Definition.new({:definition=> "in an initial stage", :speach_part=>"adjective"}).save()
+      Definition.clear()
+      expect(Definition.all()).to(eq([]))
+    end
+  end
   #
   # describe('#find') do
   #   it('returns a word by its id number') do

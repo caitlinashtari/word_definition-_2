@@ -16,4 +16,8 @@ class Definition
     @@definitions.push(self)
   end
 
+  define_singleton_method(:clear) do
+    @@definitions = []
+  end
+
 end
