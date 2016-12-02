@@ -1,0 +1,24 @@
+<h1>Dictionary</h1>
+
+<p>Word List:</p>
+
+<ul>
+  <% @dictionary.each do |entry| %>
+  <li><%= entry.word %></li>
+  <% end %>
+</ul>
+
+<p>Add Word:</p>
+
+<form class="form-group" action="/dictionary" method="post">
+  <label for="word">Word:</label>
+  <input class="form-control" type="text" name="word">
+
+  <label for="definition">Definition:</label>
+  <input class="form-control" type="text" name="definition">
+
+  <label for="speach_part">Part of Speach:</label>
+  <input class="form-control" type="text" name="speach_part">
+
+  <button type="submit" class="btn btn-primary">Add Word</button>
+</form>
