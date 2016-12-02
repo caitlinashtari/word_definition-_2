@@ -1,10 +1,11 @@
 class Word
   @@words = []
-  attr_reader :word, :id
+  attr_reader :word, :id, :definitions
 
   define_method(:initialize) do |attributes|
     @word = attributes.fetch(:word)
     @id = @@words.length + 1
+    @definitions = []
   end
 
   define_singleton_method(:all) do
