@@ -55,11 +55,11 @@ describe(Definition) do
     end
   end
 
-  # describe(".all") do
-  #   it('returns an empty @@words') do
-  #     expect(Word.all).to(eq([]))
-  #   end
-  # end
+  describe(".all") do
+    it('returns an empty @@definitions') do
+      expect(Definition.all).to(eq([]))
+    end
+  end
   #
   # describe("#save") do
   #   it('adds a word to the @@words array') do

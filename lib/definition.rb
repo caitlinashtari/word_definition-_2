@@ -7,4 +7,9 @@ class Definition
     @speach_part = attributes.fetch(:speach_part)
     @id = @@definitions.length + 1
   end
+
+  define_singleton_method(:all) do
+    @@definitions
+  end
+
 end
