@@ -13,6 +13,11 @@ describe(Word) do
     end
   end
 
+  describe(".all")do
+    it('returns an empty @@words') do
+      expect(Word.all).to(eq([]))
+    end
+  end
 
 
 end
