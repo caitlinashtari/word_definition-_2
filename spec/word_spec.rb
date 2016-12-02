@@ -61,13 +61,13 @@ describe(Definition) do
     end
   end
   #
-  # describe("#save") do
-  #   it('adds a word to the @@words array') do
-  #     test_word = Word.new({:word=> "immure", :definition=> "to shut in"})
-  #     test_word.save()
-  #     expect(Word.all).to(eq([test_word]))
-  #   end
-  # end
+  describe("#save") do
+    it('adds a definition to the @@definitionss array') do
+      test_definition = Definition.new({:definition=> "in an initial stage", :speach_part=>"adjective"})
+      test_definition.save()
+      expect(Definition.all).to(eq([test_definition]))
+    end
+  end
   #
   # describe(".clear") do
   #   it('empties all of the saved words from the @@words array') do
