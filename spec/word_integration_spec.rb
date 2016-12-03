@@ -29,13 +29,13 @@ end
 describe('the word link to definition path', {:type=> :feature}) do
   it('takes the user to the definition of the selected word') do
     visit('/')
-    fill_in('word', :with=> "heartsease")
-    fill_in('definition', :with=> "peace of mind")
+    fill_in('word', :with=> "Epicodus")
+    fill_in('definition', :with=> "code school")
     fill_in('speach_part', :with=> "noun")
     click_button("Add Word")
     click_link('Back')
-    click_line('heartsease')
-    expect(page).to have_content('heartsease')
+    click_link('Epicodus')
+    expect(page).to have_content('Epicodus')
   end
 
 end
