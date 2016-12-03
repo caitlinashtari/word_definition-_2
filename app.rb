@@ -24,5 +24,7 @@ end
 
 get('/word/:id') do
   @displayed_word = Word.find(params.fetch('id').to_i())
+  @displayed_speach = Definition.find(params.fetch('id').to_i())
+  @displayed_definition = Definition.find(params.fetch('id').to_i())
   erb(:word_view)
 end
