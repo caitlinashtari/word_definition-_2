@@ -25,3 +25,17 @@ describe('the add another word/see words path', {:type => :feature}) do
     expect(page).to have_content('Dictionary')
   end
 end
+
+describe('the word link to definition path', {:type=> :feature}) do
+  it('takes the user to the definition of the selected word') do
+    visit('/')
+    fill_in('word', :with=> "heartsease")
+    fill_in('definition', :with=> "peace of mind")
+    fill_in('speach_part', :with=> "noun")
+    click_button("Add Word")
+    click_link('Back')
+    click_line('heartsease')
+    expect(page).to have_content('heartsease')
+  end
+
+end

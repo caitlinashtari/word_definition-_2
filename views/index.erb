@@ -4,13 +4,14 @@
 
 <ul>
   <% @dictionary.each do |entry| %>
-  <li><%= entry.word %></li>
+  <li><a href="/word/<%= entry.id %>"><%= entry.word %></a></li>
   <% end %>
 </ul>
 
 <p>Add Word:</p>
 
-<form class="form-group" action="/dictionary" method="post">
+<form class="form-group" action="/word" method="post">
+
   <label for="word">Word:</label>
   <input class="form-control" type="text" name="word">
 
