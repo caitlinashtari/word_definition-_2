@@ -1,10 +1,15 @@
 <div class="well" id="word-view">
   <h2>Word: <%= @displayed_word.word %></h2>
 
-  <h3>Part of Speach: <%= @displayed_speach.speach_part %></h3>
+  <h3>Definition:
+    <% (@displayed_word.definitions).each do |definition| %>
+    <p>(<%= definition.speach_part %>) <%= definition.definition %></p>
 
-  <h3>Definition: <%= @displayed_definition.definition %></h3>
+    <% end %>
+  </h3>
   <br>
 </div>
+
+<p><a class="btn btn-primary" id="new_added_definition" href="/word/<%= @displayed_word.id %>/definition_new">Add another definition for <%= @displayed_word.word %>!</a></p>
 
 <p><a class="btn btn-success" id="word-view-back" href="/">Back</a><p>
