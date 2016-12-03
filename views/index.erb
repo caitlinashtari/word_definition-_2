@@ -1,25 +1,29 @@
-<h1>Dictionary</h1>
+<h1 class="jumbotron">Dictionary</h1>
 
-<p>Word List:</p>
+<div class="well">
+  <p>Word List:</p>
 
-<ul>
-  <% @dictionary.each do |entry| %>
-  <li><a href="/word/<%= entry.id %>"><%= entry.word %></a></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @dictionary.each do |entry| %>
+    <li><a href="/word/<%= entry.id %>"><%= entry.word %></a></li>
+    <% end %>
+  </ul>
+</div>
 
-<p>Add Word:</p>
+<div class="well">
+  <p>Add Word:</p>
 
-<form class="form-group" action="/word" method="post">
+  <form class="form-group" action="/word" method="post">
 
-  <label for="word">Word:</label>
-  <input class="form-control" type="text" name="word">
-
-  <label for="definition">Definition:</label>
-  <input class="form-control" type="text" name="definition">
-
-  <label for="speach_part">Part of Speach:</label>
-  <input class="form-control" type="text" name="speach_part">
-
-  <button type="submit" class="btn btn-primary">Add Word</button>
-</form>
+    <label for="word">Word:</label>
+    <input class="form-control" type="text" name="word">
+    <br>
+    <label for="definition">Definition:</label>
+    <input class="form-control" type="text" name="definition">
+    <br>
+    <label for="speach_part">Part of Speach:</label>
+    <input class="form-control" type="text" name="speach_part">
+    <br>
+    <button type="submit" class="btn btn-primary">Add Word</button>
+  </form>
+</div>

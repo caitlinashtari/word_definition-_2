@@ -1,5 +1,10 @@
-<%= @displayed_word.word %>
+<div class="well" id="word-view">
+  <h2>Word: <%= @displayed_word.word %></h2>
 
-<%= @displayed_speach.speach_part %>
+  <h3>Part of Speach: <%= @displayed_speach.speach_part %></h3>
 
-<%= @displayed_definition.definition %>
+  <h3>Definition: <%= @displayed_definition.definition %></h3>
+  <br>
+</div>
+
+<p><a class="btn btn-success" id="word-view-back" href="/">Back</a><p>

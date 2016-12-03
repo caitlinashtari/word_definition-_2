@@ -1,0 +1,13 @@
+.jumbotron {
+  text-align: center;
+}
+
+ul, p {
+  font-size: 20px;
+}
+
+#word-view,
+#success-view {
+  text-align: center;
+  margin-top: 40px;
+}
