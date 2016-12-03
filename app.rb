@@ -11,7 +11,7 @@ get('/') do
 end
 
 post('/word') do
-  @word = params.fetch("word")
+  @word = params.fetch('word')
   @definition = params.fetch('definition')
   @speach_part = params.fetch('speach_part')
   @new_word = Word.new(:word=> @word)
