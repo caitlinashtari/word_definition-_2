@@ -4,6 +4,9 @@ require('definition')
 
 
 describe(Word) do
+  before () do
+    Word.clear
+  end
   describe("#initialize") do
     it('creates a new Word object and sets its attributes') do
       test_word = Word.new({:word=> "incipient"})
@@ -55,6 +58,9 @@ describe(Word) do
 end
 
 describe(Definition) do
+  before() do
+    Definition.clear
+  end
   describe("#initialize") do
     it('creates a new Definition object and sets its attributes') do
       test_definition = Definition.new({:definition=> "in an initial stage", :speach_part=>"adjective"})
